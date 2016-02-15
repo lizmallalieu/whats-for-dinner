@@ -1,0 +1,23 @@
+{
+  "name": "whats-for-dinner",
+  "homepage": "https://github.com/lizmallalieu/whats-for-dinner",
+  "authors": [
+    "Elizabeth Mallalieu <lizmallalieu@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone-amd": "~1",
+    "jquery": "~2",
+    "underscore": "^1.8.3"
+  }
+}
