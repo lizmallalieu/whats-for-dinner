@@ -4,7 +4,7 @@ var RecipeEntry = Backbone.Model.extend({
     id: 0,
     title: 'recipe',
     image: undefined,
-    sourceUrl: // comes from GET recipe information route
+    // sourceUrl: comes from GET recipe information route
   },
 
 
