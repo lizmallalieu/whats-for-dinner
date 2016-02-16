@@ -26,7 +26,7 @@ var Recipes = Backbone.Collection.extend({
 
     $.ajax({
 
-      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=' + ingredients + '&limitLicense=false&number=2&ranking=1',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=' + ingredients + '&limitLicense=false&number=1&ranking=1',
       type: 'GET',
       contentType: 'application/json',
 
@@ -51,24 +51,6 @@ var Recipes = Backbone.Collection.extend({
 
 
     });
-
-
-      // $.ajax({
-      //       url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + recipeId + '/information',
-      //       type: 'GET',
-      //       contentType: 'application/json',
-
-      //       success: function(result) {
-
-      //         data[i] = {
-      //           id: recipeId,
-      //           title: recipeTitle,
-      //           image: recipeImage,
-      //           url: result.sourceUrl,
-      //           source: result.sourceName
-      //         }
-
-      //       }.bind(this)
           
   }
 });
