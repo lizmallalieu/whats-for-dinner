@@ -1,0 +1,17 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700);
+
+body {
+  background-image: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/restaurant.png');
+}
+
+h1 {
+  padding-top: 110px;
+  font-size: 80px;
+  text-align: center;
+  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+  color: #333;
+ 
+input {
+  text-align: center;
+  width: 200px;
+}
