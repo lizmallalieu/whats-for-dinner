@@ -9,7 +9,7 @@ var InputView = Backbone.View.extend({
   initialize: function() {
     this.resetInput();
     return this;
-  }
+  },
 
   keyAction: function(e) {
 

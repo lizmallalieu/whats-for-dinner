@@ -2,7 +2,7 @@ var RecipeEntryView = Backbone.View.extend({
 
   className: 'entry',
 
-  template: _.template('<p>Recipe Name: ' + recipeName + '</p>'),
+  template: _.template('<p><%= title %></p>'),
 
   events: {
     'click': 'clickAction'
@@ -16,7 +16,7 @@ var RecipeEntryView = Backbone.View.extend({
   render: function() {
 
     var entry = this.template({
-      recipeName: this.model.get('title')
+      title: this.model.get('title')
     });
 
     this.$el.html(entry);
