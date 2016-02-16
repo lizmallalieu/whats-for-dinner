@@ -2,10 +2,10 @@ var RecipeEntryView = Backbone.View.extend({
 
   className: 'entry',
 
-  template: _.template('<p><%= title %></p>'),
+  template: _.template('<div><%= title %></div>'),
 
   events: {
-    'click': 'clickAction'
+
   },
 
   initialize: function() {
@@ -22,9 +22,5 @@ var RecipeEntryView = Backbone.View.extend({
     this.$el.html(entry);
 
   },
-
-  clickAction: function() {
-    this.model.toggleUnit();
-  }
 
 });

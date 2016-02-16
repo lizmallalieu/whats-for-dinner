@@ -11,7 +11,7 @@ var ListView = Backbone.View.extend({
     this.$el.empty();
 
     this.entries = this.collection.models.map(function(model) {
-      return new EntryView({
+      return new RecipeEntryView({
         model: model
       });
     });

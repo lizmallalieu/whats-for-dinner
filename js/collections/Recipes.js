@@ -22,7 +22,8 @@ var Recipes = Backbone.Collection.extend({
           }
         }
 
-        this.reset(data);
+        this.reset();
+        this.add(data);
       
       }.bind(this)
 

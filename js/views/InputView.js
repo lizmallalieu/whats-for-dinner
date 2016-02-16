@@ -24,7 +24,7 @@ var InputView = Backbone.View.extend({
 
   resetInput: function() {
     this.$el.attr({
-      placeholder: 'Enter ingredients separated by commas'
+      placeholder: 'Enter ingredients...'
     });
     this.clearInput();
   },
