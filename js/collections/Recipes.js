@@ -7,28 +7,68 @@ var Recipes = Backbone.Collection.extend({
     // modify ingredients string for URL
     ingredients = ingredients.split(', ').join('%2');
 
+      // function first() {
+      //    return $.ajax(...);
+      // }
+
+      // function second(data, textStatus, jqXHR) {
+      //    return $.ajax(...);
+      // }
+
+      // function third(data, textStatus, jqXHR) {
+      //    return $.ajax(...);
+      // }
+
+      // function main() {
+      //     first().then(second).then(third);
+      // }
+
+
     $.ajax({
 
-      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=' + ingredients + '&limitLicense=false&number=10&ranking=1',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=' + ingredients + '&limitLicense=false&number=2&ranking=1',
       type: 'GET',
       contentType: 'application/json',
+
+
       success: function(data) {
 
+        var recipeObj = [];
+        
         for(var i = 0; i < data.length; i++) {
-          data[i] = {
+          recipeObj[i] = {
             id: data[i].id,
             title: data[i].title,
-            image: data[i].image
+            image: data[i].image,
           }
         }
 
         this.reset();
-        this.add(data);
-      
+        console.log(recipeObj);
+        this.add(recipeObj);
+        
       }.bind(this)
 
 
     });
 
+
+      // $.ajax({
+      //       url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + recipeId + '/information',
+      //       type: 'GET',
+      //       contentType: 'application/json',
+
+      //       success: function(result) {
+
+      //         data[i] = {
+      //           id: recipeId,
+      //           title: recipeTitle,
+      //           image: recipeImage,
+      //           url: result.sourceUrl,
+      //           source: result.sourceName
+      //         }
+
+      //       }.bind(this)
+          
   }
 });
