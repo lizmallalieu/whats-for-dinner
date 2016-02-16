@@ -26,7 +26,7 @@ var Recipes = Backbone.Collection.extend({
 
     $.ajax({
 
-      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=' + ingredients + '&limitLicense=false&number=1&ranking=1',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=' + ingredients + '&limitLicense=false&number=5&ranking=1',
       type: 'GET',
       contentType: 'application/json',
 

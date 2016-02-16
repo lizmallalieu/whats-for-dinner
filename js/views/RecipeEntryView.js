@@ -26,6 +26,7 @@ var RecipeEntryView = Backbone.View.extend({
   },
 
   clickForMore: function(e) {
+    // TODO: isolate this so it only gets called if user clicks on link, not whole div
     this.model.grabSource(this.model.get('id'));
   }
 
