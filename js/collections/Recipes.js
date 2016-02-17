@@ -4,8 +4,12 @@ var Recipes = Backbone.Collection.extend({
 
   addRecipeEntries: function(ingredients) {
 
+    console.log('pre formatting', ingredients);
+
     // modify ingredients string for URL
-    ingredients = ingredients.split(', ').join('%2');
+    ingredients = ingredients.split(', ').join('%2C');
+
+    console.log('post formatting', ingredients);
 
       // function first() {
       //    return $.ajax(...);
@@ -26,7 +30,7 @@ var Recipes = Backbone.Collection.extend({
 
     $.ajax({
 
-      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=' + ingredients + '&limitLicense=false&number=2&ranking=1',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=' + ingredients + '&limitLicense=false&number=5&ranking=1',
       type: 'GET',
       contentType: 'application/json',
 
