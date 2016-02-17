@@ -2,7 +2,7 @@ var RecipeEntryView = Backbone.View.extend({
 
   className: 'entry',
 
-  template: _.template('<div><img src="<%= image %>""><br><%= title %><br><a class="<%= id %>">See More</a></div>'),
+  template: _.template('<img src="<%= image %>""><br><p><%= title %><br><a class="<%= id %>">See More</a></p>'),
 
   events: {
     'click': 'clickForMore'
